@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/etc/sudoers.d'
 let g:netrw_dirhist_2='/etc/apt/sources.list.d'
+let g:netrw_dirhist_3='/usr/share/games/fortunes'
+let g:netrw_dirhist_4='/home/yash/.oh-my-zsh/custom'
+let g:netrw_dirhist_5='/home/yash/Prgrmng/bash'
+let g:netrw_dirhist_6='/home/yash/.oh-my-zsh/themes'
