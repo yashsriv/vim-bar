@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/yash/Arduino/libraries/HybridBot'
 let g:netrw_dirhist_2='/home/yash/Prgrmng/Python/time-pass'
 let g:netrw_dirhist_3='/home/yash/Prgrmng/Python/reversii/.git'
 let g:netrw_dirhist_4='/home/yash/RconGit/Rcon16/Ecobot/LineDetectionIP'
+let g:netrw_dirhist_5='/home/yash/dotfiles/oh-my-zsh/custom/themes'
