@@ -2,8 +2,6 @@
 " Vundle                                                                                                                "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-filetype off                             " required
-
 " Setting up Vundle - the vim plugin bundler
 let vim_plug_installed=1
 let plug_vim='~/.vim/autoload/plug.vim'
@@ -48,7 +46,7 @@ Plug 'ap/vim-css-color'                " Colored css
 "Plug 'LaTeX-Box-Team/LaTeX-Box'       " LaTeX plugin
 Plug 'lervag/vimtex'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'vim-scripts/AutoComplPop'
+"Plug 'vim-scripts/AutoComplPop'
 call plug#end()                          " required
 
 if vim_plug_installed== 0
@@ -68,5 +66,5 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts  = 1
 let g:airline_theme="harlequin"
 " Use deoplete.
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" :deoplete#mappings#manual_complete()
+let g:deoplete#enable_at_startup = 0
+"inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" :deoplete#mappings#manual_complete()
