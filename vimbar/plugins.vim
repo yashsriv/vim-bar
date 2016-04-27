@@ -23,8 +23,8 @@ Plug 'vim-airline/vim-airline'         " Powerful statusline
 Plug 'Lokaltog/vim-easymotion'         " Easy Motion search
 Plug 'majutsushi/tagbar'               " Tagbar ( Display info on structure of code)
 Plug 'Yggdroot/indentLine'             " Show indents
-Plug 'suan/vim-instant-markdown'       " Display Markdown
-Plug 'funorpain/vim-cpplint'           " Cpplint checker
+Plug 'suan/vim-instant-markdown', {'for' : 'markdown'}       " Display Markdown
+Plug 'funorpain/vim-cpplint', {'for' : ['cpp', 'c', 'arduino'] }          " Cpplint checker
 Plug 'flazz/vim-colorschemes'          " Vim Colorschemes
 Plug 'godlygeek/tabular'               " Table Settings
 Plug 'scrooloose/syntastic'            " Syntax Checker
@@ -67,4 +67,4 @@ let g:airline_powerline_fonts  = 1
 let g:airline_theme="harlequin"
 " Use deoplete.
 let g:deoplete#enable_at_startup = 0
-"inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" :deoplete#mappings#manual_complete()
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" :deoplete#mappings#manual_complete()
