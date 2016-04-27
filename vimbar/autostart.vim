@@ -6,7 +6,7 @@ filetype plugin indent on                                                 " File
 
 augroup filetype_specific
   autocmd!
-  autocmd filetype svn,*commit* setlocal spell                                      " Spell Check
+  autocmd filetype svn,*commit*,markdown setlocal spell                                      " Spell Check
   autocmd FileType make setlocal noexpandtab                                        " In Makefiles DO NOT use spaces instead of tabs
   autocmd FileType c setlocal equalprg=/usr/bin/astyle\ -A14s2pHUxG                 " Format code as per google guidelines for c
   autocmd FileType cpp setlocal equalprg=/usr/bin/astyle\ -A14s2pHUxG               " Format code as per google guidelines for cpp
