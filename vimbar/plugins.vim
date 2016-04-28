@@ -7,11 +7,11 @@ let vim_plug_installed=1
 let plug_vim='~/.vim/autoload/plug.vim'
 " If vim-plug file is absent, install vim-plug
 if !filereadable(plug_vim)
-  echo "Installing Vim-Plug.."
-  echo ""
-  silent call mkdir('~/.vim/autoload', "p")
-  silent execute "!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-  let vim_plug_installed=0
+  "echo "Installing Vim-Plug.."
+  "echo ""
+  "silent call mkdir('~/.vim/autoload', "p")
+  "silent execute "!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+  "let vim_plug_installed=0
 endif
 
 
@@ -66,11 +66,11 @@ endif
 if exists('g:airline_theme')
   if has('nvim')
     " Airline Settings
-    let g:airline#extensions#tabline#enabled = 1
-    let g:airline_powerline_fonts  = 1
     let g:airline_theme="harlequin"
+    let g:airline#extensions#tabline#enabled = 1
   endif
 endif
+let g:airline_powerline_fonts  = 1
 if has('nvim')
   if exists('g:deoplete#enable_at_startup')
     " Use deoplete.
