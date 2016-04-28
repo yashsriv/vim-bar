@@ -1,1 +1,1 @@
-/home/yash/.vimrc
+source ~/.vim/bar.vim
