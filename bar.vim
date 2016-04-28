@@ -1,11 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   Filename: .vimrc                                                                                                        "
+"   Filename: init.vim                                                                                                      "
 " Maintainer: Yash Srivastav <yashsriv01@gmail.com>                                                                         "
-"        URL: http://github.com/yashsriv/dotfiles                                                                           "
-"                                                                                                                           "
-"                                                                                                                           "
-" Sections:                                                                                                                 "
-"   02. Vundle ................. Plugin Related Portion                                                                     "
+"        URL: http://github.com/yashsriv/vim-bar/                                                                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.vim/vimbar/settings.vim
