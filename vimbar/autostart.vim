@@ -20,18 +20,18 @@ augroup filetype_specific
   autocmd FileType tex nnoremap <CR> :w \| let x=system('pdflatex ' . expand('%:r') . '.tex ; evince ' . expand('%:r') . '.pdf &')<CR><CR>
 augroup END
 
-augroup startup
+augroup boilerplate
   autocmd!
   "jump to last cursor position when opening a file
   autocmd BufReadPost * call SetCursorPosition()
   " Boilerplate C code
-  autocmd BufNewFile *.c $r ~/dotfiles/boilerplate/foo.c
+  autocmd BufNewFile *.c $r ~/.vim/boilerplate/foo.c
   autocmd BufNewFile *.c normal kdd2ji  
   " Boilerplate cxx , i.e., opencv IP code
-  autocmd BufNewFile *.cxx $r ~/dotfiles/boilerplate/foo.cxx
+  autocmd BufNewFile *.cxx $r ~/.vim/boilerplate/foo.cxx
   autocmd BufNewFile *.cxx normal kdd6j4l
   " Boilerplate ino code
-  autocmd BufNewFile *.ino $r ~/dotfiles/boilerplate/foo.ino
+  autocmd BufNewFile *.ino $r ~/.vim/boilerplate/foo.ino
   autocmd BufNewFile *.ino normal kdd2j
 augroup END
 
