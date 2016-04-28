@@ -1,0 +1,57 @@
+[submodule "plugged/unite.vim"]
+	path = plugged/unite.vim
+	url = git@github.com:Shougo/unite.vim
+[submodule "plugged/deoplete.nvim"]
+	path = plugged/deoplete.nvim
+	url = git@github.com:Shougo/deoplete.nvim
+[submodule "plugged/indentLine"]
+	path = plugged/indentLine
+	url = git@github.com:Yggdroot/indentLine
+[submodule "plugged/nerdcommenter"]
+	path = plugged/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter
+[submodule "plugged/nerdtree"]
+	path = plugged/nerdtree
+	url = git@github.com:scrooloose/nerdtree
+[submodule "plugged/syntastic"]
+	path = plugged/syntastic
+	url = git@github.com:scrooloose/syntastic
+[submodule "plugged/tabular"]
+	path = plugged/tabular
+	url = git@github.com:godlygeek/tabular
+[submodule "plugged/tagbar"]
+	path = plugged/tagbar
+	url = git@github.com:majutsushi/tagbar
+[submodule "plugged/vim-airline"]
+	path = plugged/vim-airline
+	url = git@github.com:vim-airline/vim-airline
+[submodule "plugged/vim-airline-harlequin"]
+	path = plugged/vim-airline-harlequin
+	url = git@github.com:yashsriv/vim-airline-harlequin
+[submodule "plugged/vim-autoformat"]
+	path = plugged/vim-autoformat
+	url = git@github.com:Chiel92/vim-autoformat
+[submodule "plugged/vim-colorschemes"]
+	path = plugged/vim-colorschemes
+	url = git@github.com:flazz/vim-colorschemes
+[submodule "plugged/vim-cpp-enhanced-highlight"]
+	path = plugged/vim-cpp-enhanced-highlight
+	url = git@github.com:octol/vim-cpp-enhanced-highlight
+[submodule "plugged/vim-cpplint"]
+	path = plugged/vim-cpplint
+	url = git@github.com:funorpain/vim-cpplint
+[submodule "plugged/vim-css-color"]
+	path = plugged/vim-css-color
+	url = git@github.com:ap/vim-css-color
+[submodule "plugged/vim-easymotion"]
+	path = plugged/vim-easymotion
+	url = git@github.com:Lokaltog/vim-easymotion
+[submodule "plugged/vim-instant-markdown"]
+	path = plugged/vim-instant-markdown
+	url = git@github.com:suan/vim-instant-markdown
+[submodule "plugged/vimtex"]
+	path = plugged/vimtex
+	url = git@github.com:lervag/vimtex
+[submodule "plugged/vim-trailing-whitespace"]
+	path = plugged/vim-trailing-whitespace
+	url = git@github.com:bronson/vim-trailing-whitespace
