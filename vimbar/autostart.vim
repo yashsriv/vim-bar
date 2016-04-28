@@ -45,8 +45,12 @@ augroup close
 augroup END
 
 function! CloseAllSplits()
-  TagbarClose
-  NERDTreeClose
+  if exists(':TagbarClose')
+    TagbarClose
+  endif
+  if exists(':NERDTreeClose')
+    NERDTreeClose
+  endif
 endfunction
 
 function! SetCursorPosition()

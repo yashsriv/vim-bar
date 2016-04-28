@@ -34,7 +34,9 @@ set statusline+=%*
 
 " Syntastic Error messages
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+if exists(':SyntasticInfo')
+  set statusline+=%{SyntasticStatuslineFlag()}
+endif
 set statusline+=%*
 
 set statusline+=%=
@@ -42,14 +44,16 @@ set statusline+=%-14.(%c%V\ ,\ %l/%L%)\ %P
 
 set laststatus=2               " Last window always has a statusline
 
-" Airline
+if has('nvim')
+  " Airline
 
-let g:airline_section_c = airline#section#create(['%t'])
-let options_section_y = []
-let g:airline_section_y = airline#section#create(options_section_y)
-
+  let g:airline_section_c = airline#section#create(['%t'])
+  let options_section_y = []
+  let g:airline_section_y = airline#section#create(options_section_y)
+endif
 
 " Possibly the default config of vim-airline
+
 "let g:airline_section_a = airline#section#create(['mode', 'crypt', 'paste', 'spell', 'iminsert'])
 "let g:airline_section_b = airline#section#create(['hunks', 'branch'])
 "let g:airline_section_gutter = airline#section#create(['readonly'])

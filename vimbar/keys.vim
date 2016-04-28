@@ -29,10 +29,14 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <tab> i<tab><esc>
 " Remove Highlight
 nnoremap <leader><leader>c :noh<cr>
-" Directory Movement
-nnoremap <leader><leader>d :NERDTreeToggle<CR>
-" Tagbar
-nnoremap <leader><leader>t :TagbarToggle<CR>
+if exists(':NERDTreeToggle')
+  " Directory Movement
+  nnoremap <leader><leader>d :NERDTreeToggle<CR>
+endif
+if exists(':TagbarToggle')
+  " Tagbar
+  nnoremap <leader><leader>t :TagbarToggle<CR>
+endif
 " Window Movement in insert mode
 inoremap <C-w> <C-o><C-w>
 " Save file as superuser

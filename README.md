@@ -19,6 +19,17 @@ A Soap for cleaning code.
 # Installation
 It's suggested you view bar.vim and all the other dependency files in the vimbar folder rather than just using this as is  
 But for instant comfort,
-```
+``` bash
+# Backup previous vimrc and vim folder
+mv ~/.vim ~/.vim.bak
+mv ~/.vimrc ~/.vimrc.bak
+# Clone vim folder
 git clone https://github.com/yashsriv/vim-bar.git ~/.vim
+# For vim
+ln -s ~/.vim/init.vim ~/.vimrc
+# For NeoVim
+ln -s ~/.vim ~/.config/nvim
+# For installing all plugins
+vim -c "PlugInstall"
+
 ```

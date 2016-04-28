@@ -6,7 +6,9 @@ set number                     " Show line number
 set rnu                        " Relative line numbers
 set cul                        " Highlight Current Line
 set showcmd                    " Show command in bottom bar
-"set showmode                   " Show current mode
+if !has('nvim')
+  set showmode                   " Show current mode
+endif
 filetype indent on             " Load filetype specific indent files
 set wildmode=longest:list,full " Autocomplete on command line
 set wildmenu                   " Enable ctrl-n and ctrl-p to scroll through matches
