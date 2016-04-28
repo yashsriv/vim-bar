@@ -31,5 +31,7 @@ ln -s ~/.vim/init.vim ~/.vimrc
 ln -s ~/.vim ~/.config/nvim
 # For installing all plugins
 vim -c "PlugInstall"
+# OR you could try
+git submodule update
 
 ```
