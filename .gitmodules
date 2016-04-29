@@ -58,3 +58,6 @@
 [submodule "plugged/vim-scala"]
 	path = plugged/vim-scala
 	url = git@github.com:derekwyatt/vim-scala
+[submodule "plugged/neocomplete.vim"]
+	path = plugged/neocomplete.vim
+	url = git@github.com:Shougo/neocomplete.vim
