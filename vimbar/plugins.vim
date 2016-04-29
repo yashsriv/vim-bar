@@ -16,13 +16,14 @@ endif
 
 
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdcommenter'        " Good Commenting
-Plug 'scrooloose/nerdtree'             " File Browsing
-Plug 'yashsriv/vim-airline-harlequin'  " My own colorscheme for airline
-Plug 'Lokaltog/vim-easymotion'         " Easy Motion search
-Plug 'majutsushi/tagbar'               " Tagbar ( Display info on structure of code)
-Plug 'Yggdroot/indentLine'             " Show indents
+Plug 'scrooloose/nerdcommenter'                              " Good Commenting
+Plug 'scrooloose/nerdtree'                                   " File Browsing
+Plug 'yashsriv/vim-airline-harlequin'                        " My own colorscheme for airline
+Plug 'Lokaltog/vim-easymotion'                               " Easy Motion search
+Plug 'majutsushi/tagbar'                                     " Tagbar ( Display info on structure of code)
+Plug 'Yggdroot/indentLine'                                   " Show indents
 Plug 'suan/vim-instant-markdown', {'for' : 'markdown'}       " Display Markdown
+Plug 'derekwyatt/vim-scala', {'for' : 'scala'}
 Plug 'funorpain/vim-cpplint', {'for' : ['cpp', 'c', 'arduino'] }          " Cpplint checker
 Plug 'flazz/vim-colorschemes'          " Vim Colorschemes
 Plug 'godlygeek/tabular'               " Table Settings
