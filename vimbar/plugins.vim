@@ -39,9 +39,11 @@ Plug 'godlygeek/tabular'                                          " Table Settin
 
 " Autocomplete
 "Plug 'vim-scripts/AutoComplPop'                                   " Pop autocomplete
-"Plug 'ervandew/supertab'                                          " Autocomplete on Tab
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }           " Autocomplete while typing
-if has('nvim')
+if ($USER == 'yash')
+  Plug 'vim-airline/vim-airline'                                  " Powerful statusline
+  Plug 'ervandew/supertab'                                          " Autocomplete on Tab
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }           " Autocomplete while typing
+elseif has('nvim')
   Plug 'vim-airline/vim-airline'                                  " Powerful statusline
   function! DoRemote(arg)
     UpdateRemotePlugins

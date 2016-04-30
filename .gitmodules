@@ -61,3 +61,9 @@
 [submodule "plugged/neocomplete.vim"]
 	path = plugged/neocomplete.vim
 	url = git@github.com:Shougo/neocomplete.vim
+[submodule "plugged/supertab"]
+	path = plugged/supertab
+	url = git@github.com:ervandew/supertab
+[submodule "plugged/YouCompleteMe"]
+	path = plugged/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe
