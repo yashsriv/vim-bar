@@ -46,23 +46,7 @@ set laststatus=2               " Last window always has a statusline
 
 if has('nvim')
   " Airline
-
   let g:airline_section_c = airline#section#create(['%t'])
   let options_section_y = []
   let g:airline_section_y = airline#section#create(options_section_y)
 endif
-
-" Possibly the default config of vim-airline
-
-"let g:airline_section_a = airline#section#create(['mode', 'crypt', 'paste', 'spell', 'iminsert'])
-"let g:airline_section_b = airline#section#create(['hunks', 'branch'])
-"let g:airline_section_gutter = airline#section#create(['readonly'])
-"let options_section_x = ['tagbar', 'filetype']
-"if exists('*env#statusline')
-"call add(options_section_x, '%{GitBranchInfoString()}')
-"endif
-"let g:airline_section_x = airline#section#create(options_section_x)
-"let g:airline_section_y = airline#section#create(['%{&fenc}', '[%{&ff}]'])
-"let g:airline_section_z = airline#section#create(['%P ', g:airline_symbols.linenr, ' %l : %c'])
-"let g:airline_section_error = airline#section#create(['ycm_error_count', 'syntastic', 'eclim'])
-"let g:airline_section_warning = airline#section#create(['ycm_warning_count', 'whitespace'])

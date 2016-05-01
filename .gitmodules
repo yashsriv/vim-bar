@@ -67,3 +67,24 @@
 [submodule "plugged/YouCompleteMe"]
 	path = plugged/YouCompleteMe
 	url = git@github.com:Valloric/YouCompleteMe
+[submodule "plugged/context_filetype.vim"]
+	path = plugged/context_filetype.vim
+	url = git@github.com:Shougo/context_filetype.vim
+[submodule "plugged/echodoc.vim"]
+	path = plugged/echodoc.vim
+	url = git@github.com:Shougo/echodoc.vim
+[submodule "plugged/deoplete-clang"]
+	path = plugged/deoplete-clang
+	url = git@github.com:zchee/deoplete-clang
+[submodule "plugged/deoplete-jedi"]
+	path = plugged/deoplete-jedi
+	url = git@github.com:zchee/deoplete-jedi
+[submodule "plugged/neoinclude.vim"]
+	path = plugged/neoinclude.vim
+	url = git@github.com:Shougo/neoinclude.vim
+[submodule "plugged/ultisnips"]
+	path = plugged/ultisnips
+	url = git@github.com:SirVer/ultisnips
+[submodule "plugged/vim-snippets"]
+	path = plugged/vim-snippets
+	url = git@github.com:honza/vim-snippets
