@@ -17,7 +17,8 @@ A Soap for cleaning code.
 * Boilerplate code insertion for certain types of files
 * All the plugins I use
 * Auto commands for certain files
-## Structure
+
+# Structure
     |-init.vim: Sources bar.vim
     |--bar.vim: Sources all .vim files in vimbar
     |--vimbar/:
