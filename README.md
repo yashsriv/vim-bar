@@ -6,6 +6,7 @@ __     ___             ____
    \_/  |_|_| |_| |_| |____/ \__,_|_|   
                                         
 ```
+![Screenshot](https://raw.githubusercontent.com/yashsriv/vim-bar/master/vim_photo.png)
 # Pun Intended
 A Soap for cleaning code.
 # Features
