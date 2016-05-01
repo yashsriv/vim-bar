@@ -6,7 +6,7 @@ __     ___             ____
    \_/  |_|_| |_| |_| |____/ \__,_|_|   
                                         
 ```
-![Screenshot](https://raw.githubusercontent.com/yashsriv/vim-bar/master/vim_photo.png)
+![Screen Shot](https://raw.githubusercontent.com/yashsriv/vim-bar/master/vim_photo.png)
 # Pun Intended
 A Soap for cleaning code.
 # Features
@@ -17,8 +17,21 @@ A Soap for cleaning code.
 * Boilerplate code insertion for certain types of files
 * All the plugins I use
 * Auto commands for certain files
+## Structure
+    |-init.vim: Sources bar.vim
+    |--bar.vim: Sources all .vim files in vimbar
+    |--vimbar/:
+      |--------appearance.vim: Appearance settings
+      |---------autostart.vim: Autocommands for different filetypes and a tweak for restoring cursor position
+      |--------------keys.vim: Personal key mappings. Major one being ,. to <Esc>
+      |-----------plugins.vim: Various different plugins
+      |----------settings.vim: General settings like undo
+      |--------statusline.vim: Statusline for normal vim
+      |---text_formatting.vim: Tab width settings and stuff
+      |----------------ui.vim: UI Settings
 # Installation
-It's suggested you view bar.vim and all the other dependency files in the vimbar folder rather than just using this as is  
+It's suggested you view bar.vim and all the other dependency files in the vimbar
+folder and take what you need rather than just using this as is.  
 But for instant comfort,
 ``` bash
 # Backup previous vimrc and vim folder
