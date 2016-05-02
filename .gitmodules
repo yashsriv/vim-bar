@@ -88,3 +88,6 @@
 [submodule "plugged/vim-snippets"]
 	path = plugged/vim-snippets
 	url = git@github.com:honza/vim-snippets
+[submodule "plugged/neomake"]
+	path = plugged/neomake
+	url = git@github.com:benekastah/neomake
