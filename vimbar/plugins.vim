@@ -35,7 +35,6 @@ Plug 'Shougo/echodoc.vim'                                       " show documenta
 Plug 'Yggdroot/indentLine'                                        " Show indents
 Plug 'scrooloose/nerdcommenter'                                   " Good Commenting
 Plug 'scrooloose/nerdtree'                                        " File Browsing
-"Plug 'scrooloose/syntastic'                                       " Syntax Checker
 Plug 'godlygeek/tabular'                                          " Table Settings
 Plug 'majutsushi/tagbar'                                          " Tagbar ( Display info on structure of code)
 Plug 'Shougo/unite.vim'                                           " Something very powerful(trying to learn)
@@ -50,11 +49,13 @@ if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }     " Dark powered neocomplete
   Plug 'zchee/deoplete-jedi'                                      " Python completion
   Plug 'zchee/deoplete-clang'                                     " C Family completion
+  Plug 'benekastah/neomake'                                       " Neomake
 else
   Plug 'Shougo/neocomplete.vim'                                   " Fast autocomplete
+  Plug 'scrooloose/syntastic'                                     " Syntax Checker
 endif
-Plug 'Shougo/context_filetype.vim'                              " Context filetype feature (suggested for deoplete)
-Plug 'Shougo/neoinclude.vim'                                    " completion results from included files
+Plug 'Shougo/context_filetype.vim'                                " Context filetype feature (suggested for deoplete)
+Plug 'Shougo/neoinclude.vim'                                      " completion results from included files
 
 " Looks
 Plug 'flazz/vim-colorschemes'                                     " Vim Colorschemes

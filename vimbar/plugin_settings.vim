@@ -1,4 +1,5 @@
 if has('nvim')
+
   " Airline Settings
   let g:airline_powerline_fonts  = 1
   let g:airline_theme="harlequin"
@@ -17,7 +18,6 @@ if has('nvim')
   let g:airline_symbols.linenr = ''
 
 
-
   " Use deoplete.
   let g:deoplete#enable_at_startup = 1
   " Deoplete uses all possible sources
@@ -25,10 +25,21 @@ if has('nvim')
     let g:deoplete#sources = {}
   endif
   let g:deoplete#sources._ = []
-  " Summon deoplete autocomplete
-  inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" :deoplete#mappings#manual_complete()
+
+  " Summon deoplete autocomplete except when there is no input yet
+  function! s:handle_tab()
+    let line=getline('.')
+    if match(line, '\s*$') == 0
+      return "\<Tab>"
+    else
+      return deoplete#mappings#manual_complete()
+    endif
+  endfunction
+  inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" :<sid>handle_tab()
+
   " smart close popup
   inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
+
   " special summons to omnifunc for certain filetypes
   if !exists('g:deoplete#omni#input_patterns')
     let g:deoplete#omni#input_patterns = {}
@@ -48,22 +59,35 @@ if has('nvim')
         \ . ')'
   " Refresh menu always
   let g:deoplete#enable_refresh_always = 1
+
+
   " Settings for echodoc
   set noshowmode
   set cmdheight=2
   let g:echodoc_enable_at_startup = 1
+
+
   " Settings for deoplete-clang
   let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
   let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
   let g:deoplete#sources#clang#sort_algo = 'priority'
+
+
   " Settings for deoplete-jedi
   let g:deoplete#sources#jedi#show_docstring = 0
+
   " Remove preview window
   set completeopt=menu
   set completeopt+=menuone
-  augroup completion
-    autocmd CompleteDone * pclose!
-  augroup END
+  autocmd! CompleteDone * pclose!
+
+
+  " Settings for neomake
+  autocmd! BufWritePost * Neomake
+  let g:neomake_verbose=0
+  let g:neomake_error_sign = {'text': 'x', 'texthl': 'ErrorMsg', }
+  let g:neomake_error_sign = {'text': '?', 'texthl': 'WarningMsg', }
+
 else
   " Use neocomplete
   let g:neocomplete#enable_at_startup = 1
@@ -81,6 +105,11 @@ else
         \ . '|includepdf%(\s*\[[^]]*\])?\s*\{[^}]*'
         \ . '|includestandalone%(\s*\[[^]]*\])?\s*\{[^}]*'
         \ . ')'
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+  let g:syntastic_mode_map = { "mode": "active", "active_filetypes": [], "passive_filetypes": ["scala"] }
 endif
 
 " Ultisnips expansion trigger

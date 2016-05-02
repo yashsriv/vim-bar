@@ -33,6 +33,8 @@ augroup boilerplate
   " Boilerplate ino code
   autocmd BufNewFile *.ino $r ~/.vim/boilerplate/foo.ino
   autocmd BufNewFile *.ino normal kdd2j
+  " Boilerplate html code
+  autocmd BufNewFile *.html $r ~/.vim/boilerplate/foo.html
 augroup END
 
 
