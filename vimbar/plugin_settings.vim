@@ -28,7 +28,7 @@ if has('nvim')
 
   " Summon deoplete autocomplete except when there is no input yet
   function! s:handle_tab()
-    let line=getline('.')
+    let line=getline('.')[:getcurpos()[2] - 2]
     if match(line, '\s*$') == 0
       return "\<Tab>"
     else
