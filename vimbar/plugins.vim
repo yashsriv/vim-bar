@@ -29,6 +29,7 @@ Plug 'octol/vim-cpp-enhanced-highlight', {'for' : 'cpp'}          " Enhanced hig
 Plug 'ap/vim-css-color', {'for': 'css'}                           " Colored css
 Plug 'suan/vim-instant-markdown', {'for' : 'markdown'}            " Display Markdown
 Plug 'derekwyatt/vim-scala', {'for': ['scala', 'sbt'] }           " Scala
+Plug 'ensime/ensime-vim', {'for': ['scala', 'sbt'] }              " Ensime
 
 " Utilities
 Plug 'Shougo/echodoc.vim'                                       " show documentation by echoing

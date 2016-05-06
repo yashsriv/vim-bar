@@ -91,3 +91,6 @@
 [submodule "plugged/neomake"]
 	path = plugged/neomake
 	url = git@github.com:benekastah/neomake
+[submodule "plugged/ensime-vim"]
+	path = plugged/ensime-vim
+	url = git@github.com:ensime/ensime-vim
