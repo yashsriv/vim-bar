@@ -16,6 +16,7 @@ augroup filetype_specific
   autocmd FileType html setlocal equalprg=js-beautify\ -s\ 2\ --html                " Format html
   autocmd FileType javascript setlocal equalprg=js-beautify\ -s\ 2                  " Format js
   autocmd FileType css setlocal equalprg=js-beautify\ -s\ 2\ --css                  " Format css
+  autocmd BufWritePost *.scala :EnTypeCheck
   " Auomatically compile and open tex files on pressing enter
   autocmd FileType tex nnoremap <CR> :w \| let x=system('pdflatex ' . expand('%:r') . '.tex ; evince ' . expand('%:r') . '.pdf &')<CR><CR>
 augroup END

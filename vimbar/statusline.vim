@@ -47,6 +47,6 @@ set laststatus=2               " Last window always has a statusline
 if has('nvim')
   " Airline
   let g:airline_section_c = airline#section#create(['%t'])
-  let options_section_y = []
+  let options_section_y = ["%{tagbar#currenttag('[%s]','','s')}"]
   let g:airline_section_y = airline#section#create(options_section_y)
 endif

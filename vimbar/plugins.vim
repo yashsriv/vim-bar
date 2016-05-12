@@ -23,16 +23,17 @@ call plug#begin('~/.vim/plugged')
 
 " Filetype specific
 "Plug 'LaTeX-Box-Team/LaTeX-Box'                                   " LaTeX plugin
-Plug 'lervag/vimtex'                                              " LaTeX plugin
-Plug 'funorpain/vim-cpplint', {'for' : ['cpp', 'c', 'arduino'] }  " Cpplint checker
-Plug 'octol/vim-cpp-enhanced-highlight', {'for' : 'cpp'}          " Enhanced highlighting in cpp
-Plug 'ap/vim-css-color', {'for': 'css'}                           " Colored css
-Plug 'suan/vim-instant-markdown', {'for' : 'markdown'}            " Display Markdown
-Plug 'derekwyatt/vim-scala', {'for': ['scala', 'sbt'] }           " Scala
-Plug 'ensime/ensime-vim', {'for': ['scala', 'sbt'] }              " Ensime
+Plug 'lervag/vimtex'                                                      " LaTeX plugin
+Plug 'funorpain/vim-cpplint', {'for' : ['cpp', 'c', 'arduino'] }          " Cpplint checker
+Plug 'octol/vim-cpp-enhanced-highlight', {'for' : 'cpp'}                  " Enhanced highlighting in cpp
+Plug 'ap/vim-css-color', {'for': 'css'}                                   " Colored css
+Plug 'suan/vim-instant-markdown', {'for' : 'markdown'}                    " Display Markdown
+Plug 'derekwyatt/vim-scala', {'for': ['scala', 'sbt'] }                   " Scala
+Plug 'ensime/ensime-vim', { 'do': function('DoRemote'), 'for': 'scala' }  " Ensime
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }  " Javascript
 
 " Utilities
-Plug 'Shougo/echodoc.vim'                                       " show documentation by echoing
+Plug 'Shougo/echodoc.vim'                                         " show documentation by echoing
 Plug 'Yggdroot/indentLine'                                        " Show indents
 Plug 'scrooloose/nerdcommenter'                                   " Good Commenting
 Plug 'scrooloose/nerdtree'                                        " File Browsing

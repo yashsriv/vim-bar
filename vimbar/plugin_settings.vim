@@ -41,11 +41,23 @@ if has('nvim')
   inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 
   " special summons to omnifunc for certain filetypes
-  if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
+  if !exists('g:deoplete#omni_patterns')
+    let g:deoplete#omni_patterns = { 'mkd': ['<', '<[^>]*\s[[:alnum:]-]*'],
+                                   \ 'xhtml': ['<', '<[^>]*\s[[:alnum:]-]*'],
+                                   \ 'markdown': ['<', '<[^>]*\s[[:alnum:]-]*'],
+                                   \ 'xml': ['<', '<[^>]*\s[[:alnum:]-]*'],
+                                   \ 'html': ['<', '<[^>]*\s[[:alnum:]-]*'],}
   endif
-  let g:deoplete#omni#input_patterns.html = '[<[</]]'
-  let g:deoplete#omni#input_patterns.css = '[[^\s{4}][:\s+]]'
+  if !exists('g:deoplete#omni#input_patterns')
+    let g:deoplete#omni#input_patterns = {'sass': ['\w+', '\w+[):;]?\s+\w*', '[@!]'],
+                                        \ 'scss': ['\w+', '\w+[):;]?\s+\w*', '[@!]'],
+                                        \ 'lua': ['\w+[.:]', 'require\s*\(?["'']\w*'],
+                                        \ 'java': ['[^. \t0-9]\.\w*'],
+                                        \ 'ruby': ['[^. \t0-9]\.\w*', '[a-zA-Z_]\w*::\w*'],
+                                        \ 'css': ['\w+', '\w+[):;]?\s+\w*', '[@!]'],}
+  endif
+  "let g:deoplete#omni#input_patterns.html = '</'
+  "let g:deoplete#omni#input_patterns.css = '[[^\s{4}][:\s+]]'
   let g:deoplete#omni#input_patterns.tex =
         \ '\v\\%('
         \ . '\a*cite\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
@@ -84,6 +96,7 @@ if has('nvim')
 
   " Settings for neomake
   autocmd! BufWritePost * Neomake
+  nnoremap <leader>q :EnType<CR>
   let g:neomake_verbose=0
   let g:neomake_error_sign = {'text': 'x', 'texthl': 'ErrorMsg', }
   let g:neomake_error_sign = {'text': '?', 'texthl': 'WarningMsg', }
@@ -114,3 +127,29 @@ endif
 
 " Ultisnips expansion trigger
 let g:UltiSnipsExpandTrigger="<S-Tab>"
+
+" Use universal ctags
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:tagbar_type_css = {
+\ 'ctagstype' : 'Css',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 's:selectors',
+        \ 'i:identities'
+    \ ]
+\ }
+let g:tagbar_type_markdown = {
+    \ 'ctagstype': 'markdown',
+    \ 'ctagsbin' : 'markdown2ctags',
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+\ }
+let g:tagbar_autoclose = 1
