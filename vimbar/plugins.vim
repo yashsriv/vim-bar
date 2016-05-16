@@ -39,7 +39,8 @@ Plug 'scrooloose/nerdcommenter'                                   " Good Comment
 Plug 'scrooloose/nerdtree'                                        " File Browsing
 Plug 'godlygeek/tabular'                                          " Table Settings
 Plug 'majutsushi/tagbar'                                          " Tagbar ( Display info on structure of code)
-Plug 'Shougo/unite.vim'                                           " Something very powerful(trying to learn)
+" Supposedly causing errors in ensime, so I'm disabling it for the time being
+"Plug 'Shougo/unite.vim'                                           " Something very powerful(trying to learn)
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'               " Snippets
 Plug 'Chiel92/vim-autoformat'                                     " AutoFormat
 Plug 'Lokaltog/vim-easymotion'                                    " Easy Motion search
