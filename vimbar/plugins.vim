@@ -36,7 +36,7 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }  " Java
 Plug 'Shougo/echodoc.vim'                                         " show documentation by echoing
 Plug 'Yggdroot/indentLine'                                        " Show indents
 Plug 'scrooloose/nerdcommenter'                                   " Good Commenting
-Plug 'scrooloose/nerdtree'                                        " File Browsing
+Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin'   " File Browsing
 Plug 'godlygeek/tabular'                                          " Table Settings
 Plug 'majutsushi/tagbar'                                          " Tagbar ( Display info on structure of code)
 " Supposedly causing errors in ensime, so I'm disabling it for the time being
@@ -63,6 +63,7 @@ Plug 'Shougo/neoinclude.vim'                                      " completion r
 " Looks
 Plug 'flazz/vim-colorschemes'                                     " Vim Colorschemes
 Plug 'bronson/vim-trailing-whitespace'                            " Show Trailing Spaces
+Plug 'ryanoasis/vim-devicons'
 
 
 call plug#end()                                                   " required

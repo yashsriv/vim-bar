@@ -94,3 +94,12 @@
 [submodule "plugged/ensime-vim"]
 	path = plugged/ensime-vim
 	url = git@github.com:ensime/ensime-vim
+[submodule "plugged/vim-devicons"]
+	path = plugged/vim-devicons
+	url = git@github.com:ryanoasis/vim-devicons
+[submodule "plugged/nerdtree-git-plugin"]
+	path = plugged/nerdtree-git-plugin
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin
+[submodule "plugged/tern_for_vim"]
+	path = plugged/tern_for_vim
+	url = git@github.com:ternjs/tern_for_vim
