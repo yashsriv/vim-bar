@@ -103,3 +103,6 @@
 [submodule "plugged/tern_for_vim"]
 	path = plugged/tern_for_vim
 	url = git@github.com:ternjs/tern_for_vim
+[submodule "plugged/zeavim.vim"]
+	path = plugged/zeavim.vim
+	url = git@github.com:KabbAmine/zeavim.vim
