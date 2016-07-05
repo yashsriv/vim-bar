@@ -13,3 +13,8 @@ source ~/.vim/vimbar/ui.vim
 source ~/.vim/vimbar/text_formatting.vim
 source ~/.vim/vimbar/keys.vim
 source ~/.vim/vimbar/statusline.vim
+
+" Special hack for st
+
+map <F1> <del>
+map! <F1> <del>
