@@ -86,7 +86,15 @@ if has('nvim')
 
 
   " Settings for deoplete-jedi
-  let g:deoplete#sources#jedi#show_docstring = 0
+  let g:deoplete#sources#jedi#show_docstring = 1
+
+  " Settings for deoplete with multiple cursors
+  function g:Multiple_cursors_before()
+    let g:deoplete#disable_auto_complete = 1
+  endfunction
+  function g:Multiple_cursors_after()
+    let g:deoplete#disable_auto_complete = 0
+  endfunction
 
   " Remove preview window
   set completeopt=menu

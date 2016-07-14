@@ -106,3 +106,6 @@
 [submodule "plugged/zeavim.vim"]
 	path = plugged/zeavim.vim
 	url = git@github.com:KabbAmine/zeavim.vim
+[submodule "plugged/vim-multiple-cursors"]
+	path = plugged/vim-multiple-cursors
+	url = git@github.com:terryma/vim-multiple-cursors

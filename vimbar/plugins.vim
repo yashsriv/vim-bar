@@ -44,6 +44,7 @@ Plug 'majutsushi/tagbar'                                          " Tagbar ( Dis
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'               " Snippets
 Plug 'Chiel92/vim-autoformat'                                     " AutoFormat
 Plug 'Lokaltog/vim-easymotion'                                    " Easy Motion search
+Plug 'terryma/vim-multiple-cursors'                               " Multiple Cursors
 Plug 'KabbAmine/zeavim.vim'                                       " Zeal
 
 " Autocomplete
