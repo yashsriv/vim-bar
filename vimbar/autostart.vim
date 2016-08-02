@@ -13,9 +13,12 @@ augroup filetype_specific
   autocmd FileType arduino setlocal equalprg=/usr/bin/astyle\ -A14s2pHUxG           " Format code as per my guidelines for arduino
   autocmd FileType java setlocal equalprg=/usr/bin/astyle\ -A14s2pHUxG              " Format code as per my guidelines for java
   autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4   " Python Spacing rules
-  autocmd FileType html setlocal equalprg=js-beautify\ -s\ 2\ --html                " Format html
-  autocmd FileType javascript setlocal equalprg=js-beautify\ -s\ 2                  " Format js
-  autocmd FileType css setlocal equalprg=js-beautify\ -s\ 2\ --css                  " Format css
+  autocmd FileType html setlocal tabstop=4 shiftwidth=4 softtabstop=4     " Python Spacing rules
+  autocmd FileType css setlocal tabstop=4 shiftwidth=4 softtabstop=4                " Python Spacing rules
+  autocmd FileType javascript setlocal tabstop=4 shiftwidth=4 softtabstop=4         " Python Spacing rules
+  autocmd FileType html setlocal equalprg=js-beautify\ -s\ 4\ --html                " Format html
+  autocmd FileType javascript setlocal equalprg=js-beautify\ -s\ 4                  " Format js
+  autocmd FileType css setlocal equalprg=js-beautify\ -s\ 4\ --css                  " Format css
   autocmd BufWritePost *.scala :EnTypeCheck
   " Auomatically compile and open tex files on pressing enter
   autocmd FileType tex nnoremap <CR> :w \| let x=system('pdflatex ' . expand('%:r') . '.tex ; evince ' . expand('%:r') . '.pdf &')<CR><CR>

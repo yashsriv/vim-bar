@@ -45,8 +45,7 @@ if has('nvim')
     let g:deoplete#omni_patterns = { 'mkd': ['<', '<[^>]*\s[[:alnum:]-]*'],
                                    \ 'xhtml': ['<', '<[^>]*\s[[:alnum:]-]*'],
                                    \ 'markdown': ['<', '<[^>]*\s[[:alnum:]-]*'],
-                                   \ 'xml': ['<', '<[^>]*\s[[:alnum:]-]*'],
-                                   \ 'html': ['<', '<[^>]*\s[[:alnum:]-]*'],}
+                                   \ 'xml': ['<', '<[^>]*\s[[:alnum:]-]*'],}
   endif
   if !exists('g:deoplete#omni#input_patterns')
     let g:deoplete#omni#input_patterns = {'sass': ['\w+', '\w+[):;]?\s+\w*', '[@!]'],
@@ -57,6 +56,7 @@ if has('nvim')
                                         \ 'css': ['\w+', '\w+[):;]?\s+\w*', '[@!]'],}
   endif
   "let g:deoplete#omni#input_patterns.html = '</'
+                                   "\ 'html': ['<', '<[^>]*\s[[:alnum:]-]*'],}
   "let g:deoplete#omni#input_patterns.css = '[[^\s{4}][:\s+]]'
   let g:deoplete#omni#input_patterns.tex =
         \ '\v\\%('
@@ -70,7 +70,7 @@ if has('nvim')
         \ . '|includestandalone%(\s*\[[^]]*\])?\s*\{[^}]*'
         \ . ')'
   " Refresh menu always
-  let g:deoplete#enable_refresh_always = 1
+  let g:deoplete#enable_refresh_always = 0
 
 
   " Settings for echodoc
