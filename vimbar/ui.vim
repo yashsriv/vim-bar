@@ -4,7 +4,6 @@
 
 set number                     " Show line number
 set rnu                        " Relative line numbers
-set cul                        " Highlight Current Line
 set showcmd                    " Show command in bottom bar
 if !has('nvim')
   set showmode                   " Show current mode
@@ -24,5 +23,6 @@ set hlsearch                   " Highlight matches
 set ignorecase                 " Case insensitive matching
 set smartcase                  " Smart case matching
 set list                       " Display all chars
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅,eol:¬
+"set listchars=tab:▷⋅,trail:⋅,nbsp:⋅,eol:¬,extends:»,precedes:«,space:␣
+set listchars=tab:▷⋅,trail:⋅,nbsp:⋅,eol:¬,extends:»,precedes:«
 set splitright                 " Vertical split on right instead of left
