@@ -213,7 +213,7 @@ call s:Highlight('MoreMsg',         s:lime, '', '', '')
   
 call s:Highlight('WildMenu',        s:black, s:lilac, 'bold', '')
 
-call s:Highlight('Title',           '', '', 'underline', '')
+call s:Highlight('Title',           '', '', 'bold', '')
 
 call s:HighlightX('Tag',            '', '', 'bold', '')
 
