@@ -22,35 +22,50 @@ call plug#begin('~/.vim/plugged')
 
 
 " Filetype specific
-"Plug 'LaTeX-Box-Team/LaTeX-Box'                                   " LaTeX plugin
-Plug 'lervag/vimtex'                                                      " LaTeX plugin
 Plug 'funorpain/vim-cpplint', {'for' : ['cpp', 'c', 'arduino'] }          " Cpplint checker
-Plug 'octol/vim-cpp-enhanced-highlight', {'for' : 'cpp'}                  " Enhanced highlighting in cpp
 Plug 'ap/vim-css-color', {'for': 'css'}                                   " Colored css
-Plug 'suan/vim-instant-markdown', {'for' : 'markdown'}                    " Display Markdown
-Plug 'derekwyatt/vim-scala', {'for': ['scala', 'sbt'] }                   " Scala
+"Plug 'suan/vim-instant-markdown'                                          " Display Markdown
+Plug 'yashsriv/vim-instant-pandoc'                                        " Display Markdown
 Plug 'ensime/ensime-vim', { 'do': function('DoRemote'), 'for': 'scala' }  " Ensime
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' }  " Javascript
+Plug 'vim-pandoc/vim-pandoc'                                              " Pandoc
+Plug 'vim-pandoc/vim-pandoc-syntax'                                       " Pandoc
+Plug 'vim-pandoc/vim-pandoc-after'                                        " Pandoc
+Plug 'sheerun/vim-polyglot'                                               " One to rule them all, one to find them, one to bring them all and in the darkness bind them.
 
 " Utilities
+Plug 'tpope/vim-eunuch'                                           " Some vim sugar for unix
+Plug 'tpope/vim-sensible'                                         " Some sensible settings
+Plug 'tpope/vim-sleuth'                                           " Autodetect file spacing
+Plug 'tpope/vim-speeddating'                                      " Incrementing dates and more
+Plug 'tpope/vim-characterize'                                     " Get info of unicode character using `ga`
 Plug 'Shougo/echodoc.vim'                                         " show documentation by echoing
-Plug 'Yggdroot/indentLine'                                        " Show indents
+Plug 'nathanaelkane/vim-indent-guides'                            " Show indents
 Plug 'scrooloose/nerdcommenter'                                   " Good Commenting
 Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin'   " File Browsing
 Plug 'godlygeek/tabular'                                          " Table Settings
 Plug 'majutsushi/tagbar'                                          " Tagbar ( Display info on structure of code)
-" Supposedly causing errors in ensime, so I'm disabling it for the time being
-"Plug 'Shougo/unite.vim'                                           " Something very powerful(trying to learn)
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'               " Snippets
 Plug 'Chiel92/vim-autoformat'                                     " AutoFormat
 Plug 'Lokaltog/vim-easymotion'                                    " Easy Motion search
 Plug 'terryma/vim-multiple-cursors'                               " Multiple Cursors
+Plug 'auto-pairs-gentle'                                          " Autocomplete brackets and stuff
+Plug 'autoswap.vim'                                               " Handle swap files transparently
+Plug 'tpope/vim-endwise'                                          " adds end endif fi, etc
 Plug 'KabbAmine/zeavim.vim'                                       " Zeal
+Plug 'vim-utils/vim-troll-stopper'                                " Prevent unicode trolling
+Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'          " Goyo - Focus
+Plug 'mattn/calendar-vim'                                         " Display calendar in vim - for orgmode
+Plug 'SyntaxRange'                                                " vim script
+Plug 'utl.vim'                                                    " vim script Universal Text Linking
+Plug 'tpope/vim-repeat'                                           " repeat command
+Plug 'mhinz/vim-startify'                                         " Start screen
 
 " Autocomplete
 if has('nvim')
   Plug 'yashsriv/vim-airline-harlequin'                           " My own colorscheme for airline
   Plug 'vim-airline/vim-airline'                                  " Powerful statusline
+  Plug 'vim-airline/vim-airline-themes'                           " Powerful statusline themes
   Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }     " Dark powered neocomplete
   Plug 'zchee/deoplete-jedi'                                      " Python completion
   Plug 'zchee/deoplete-clang'                                     " C Family completion
@@ -61,12 +76,15 @@ else
 endif
 Plug 'Shougo/context_filetype.vim'                                " Context filetype feature (suggested for deoplete)
 Plug 'Shougo/neoinclude.vim'                                      " completion results from included files
+Plug 'editorconfig/editorconfig-vim'
+
 
 " Looks
-Plug 'flazz/vim-colorschemes'                                     " Vim Colorschemes
+"Plug 'flazz/vim-colorschemes'                                     " Vim Colorschemes
+Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'                            " Show Trailing Spaces
-Plug 'ryanoasis/vim-devicons'
-
+Plug 'jonstoler/werewolf.vim'                                     " Colorscheme as per time of the day
+Plug 'ryanoasis/vim-devicons'                                     " Special icons for filetypes
 
 call plug#end()                                                   " required
 

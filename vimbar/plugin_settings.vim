@@ -1,8 +1,13 @@
+" Day/Night Colorscheme switch
+
+let g:werewolf_day_themes = ['solarized']
+let g:werewolf_night_themes = ['harlequin']
+
 if has('nvim')
 
   " Airline Settings
   let g:airline_powerline_fonts  = 1
-  let g:airline_theme="harlequin"
+  "let g:airline_theme="harlequin"
   let g:airline#extensions#tabline#enabled = 1
 
   if !exists('g:airline_symbols')
@@ -25,6 +30,7 @@ if has('nvim')
     let g:deoplete#sources = {}
   endif
   let g:deoplete#sources._ = []
+  let g:deoplete#sources.html = ['buffer']
 
   " Summon deoplete autocomplete except when there is no input yet
   function! s:handle_tab()
@@ -44,6 +50,7 @@ if has('nvim')
   if !exists('g:deoplete#omni_patterns')
     let g:deoplete#omni_patterns = { 'mkd': ['<', '<[^>]*\s[[:alnum:]-]*'],
                                    \ 'xhtml': ['<', '<[^>]*\s[[:alnum:]-]*'],
+                                   \ 'html': ['<', '<[^>]*\s[[:alnum:]-]*'],
                                    \ 'markdown': ['<', '<[^>]*\s[[:alnum:]-]*'],
                                    \ 'xml': ['<', '<[^>]*\s[[:alnum:]-]*'],}
   endif
@@ -55,9 +62,6 @@ if has('nvim')
                                         \ 'ruby': ['[^. \t0-9]\.\w*', '[a-zA-Z_]\w*::\w*'],
                                         \ 'css': ['\w+', '\w+[):;]?\s+\w*', '[@!]'],}
   endif
-  "let g:deoplete#omni#input_patterns.html = '</'
-                                   "\ 'html': ['<', '<[^>]*\s[[:alnum:]-]*'],}
-  "let g:deoplete#omni#input_patterns.css = '[[^\s{4}][:\s+]]'
   let g:deoplete#omni#input_patterns.tex =
         \ '\v\\%('
         \ . '\a*cite\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
@@ -88,7 +92,7 @@ if has('nvim')
   " Settings for deoplete-jedi
   let g:deoplete#sources#jedi#show_docstring = 1
 
-  " Settings for deoplete with multiple cursors
+  " Settings for deoplete with vim-multiple-cursors
   function g:Multiple_cursors_before()
     let g:deoplete#disable_auto_complete = 1
   endfunction
@@ -108,6 +112,7 @@ if has('nvim')
   let g:neomake_verbose=0
   let g:neomake_error_sign = {'text': 'x', 'texthl': 'ErrorMsg', }
   let g:neomake_error_sign = {'text': '?', 'texthl': 'WarningMsg', }
+  let g:neomake_python_enabled_makers = ['pylint']
 
 else
   " Use neocomplete
@@ -137,7 +142,6 @@ endif
 let g:UltiSnipsExpandTrigger="<S-Tab>"
 
 " Use universal ctags
-let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_type_css = {
 \ 'ctagstype' : 'Css',
     \ 'kinds'     : [
@@ -161,3 +165,27 @@ let g:tagbar_type_markdown = {
     \ 'sort': 0,
 \ }
 let g:tagbar_autoclose = 1
+
+" Indent Guide
+let g:werewolf_day_start = 8
+let g:werewolf_day_end = 20
+if strftime("%H") >= g:werewolf_day_start && strftime("%H") < g:werewolf_day_end
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=white
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=lightgrey
+else
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=234
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
+endif
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_enable_on_vim_startup = 1
+
+
+" Focus
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+" Diary filetype pandoc
+let g:calendar_filetype = 'pandoc'
+let g:previm_open_cmd = 'firefox-developer'
+let g:previm_open_cmd = 'firefox-developer'
+let g:instant_pandoc_port = '8090'
