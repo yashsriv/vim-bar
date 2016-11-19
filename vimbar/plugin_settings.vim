@@ -1,8 +1,3 @@
-" Day/Night Colorscheme switch
-
-let g:werewolf_day_themes = ['solarized']
-let g:werewolf_night_themes = ['harlequin']
-
 if has('nvim')
 
   " Airline Settings
@@ -167,11 +162,11 @@ let g:tagbar_type_markdown = {
 let g:tagbar_autoclose = 1
 
 " Indent Guide
-let g:werewolf_day_start = 8
-let g:werewolf_day_end = 20
-if strftime("%H") >= g:werewolf_day_start && strftime("%H") < g:werewolf_day_end
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=white
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=lightgrey
+let g:day_start = 8
+let g:day_end = 20
+if strftime("%H") >= g:day_start && strftime("%H") < g:day_end
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=grey
 else
   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=234
   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey

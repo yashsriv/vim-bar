@@ -80,10 +80,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 
 " Looks
-"Plug 'flazz/vim-colorschemes'                                     " Vim Colorschemes
-Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'                            " Show Trailing Spaces
-Plug 'jonstoler/werewolf.vim'                                     " Colorscheme as per time of the day
 Plug 'ryanoasis/vim-devicons'                                     " Special icons for filetypes
 
 call plug#end()                                                   " required
