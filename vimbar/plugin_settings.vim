@@ -88,10 +88,10 @@ if has('nvim')
   let g:deoplete#sources#jedi#show_docstring = 1
 
   " Settings for deoplete with vim-multiple-cursors
-  function g:Multiple_cursors_before()
+  function! g:Multiple_cursors_before()
     let g:deoplete#disable_auto_complete = 1
   endfunction
-  function g:Multiple_cursors_after()
+  function! g:Multiple_cursors_after()
     let g:deoplete#disable_auto_complete = 0
   endfunction
 
@@ -163,12 +163,12 @@ let g:tagbar_autoclose = 1
 
 " Indent Guide
 let g:day_start = 8
-let g:day_end = 20
+let g:day_end = 18
 if strftime("%H") >= g:day_start && strftime("%H") < g:day_end
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=grey
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=8
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
 else
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=234
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=8
   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 endif
 let g:indent_guides_auto_colors = 0
@@ -181,6 +181,31 @@ autocmd! User GoyoLeave Limelight!
 
 " Diary filetype pandoc
 let g:calendar_filetype = 'pandoc'
-let g:previm_open_cmd = 'firefox-developer'
-let g:previm_open_cmd = 'firefox-developer'
+
+" Instant Pandoc Port Settings
 let g:instant_pandoc_port = '8090'
+
+" Rainbow Parenthesis
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+  \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+  \   'ctermfgs': ['7', '5', '4', '9'],
+  \   'operators': '_,_',
+  \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+  \   'separately': {
+  \       '*': {},
+  \       'tex': {
+  \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+  \       },
+  \       'lisp': {
+  \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+  \       },
+  \       'vim': {
+  \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+  \       },
+  \       'html': {
+  \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+  \       },
+  \       'css': 0,
+  \   }
+  \}

@@ -24,5 +24,5 @@ set ignorecase                 " Case insensitive matching
 set smartcase                  " Smart case matching
 set list                       " Display all chars
 "set listchars=tab:▷⋅,trail:⋅,nbsp:⋅,eol:¬,extends:»,precedes:«,space:␣
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅,eol:¬,extends:»,precedes:«
+set listchars=tab:▷⋅,trail:⋅,nbsp:⋅,extends:»,precedes:«
 set splitright                 " Vertical split on right instead of left

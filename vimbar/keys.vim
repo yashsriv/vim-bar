@@ -64,3 +64,9 @@ inoremap <C-K> <Esc>lDa
 inoremap <C-U> <Esc>d0xi
 inoremap <C-Y> <Esc>Pa
 inoremap <C-X><C-S> <Esc>:w<CR>a
+
+iabbrev @@    admin@yashsriv.org
+
+iabbrev -> →
+iabbrev <- ←
+iabbrev => ⇒
