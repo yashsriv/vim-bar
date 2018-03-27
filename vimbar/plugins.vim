@@ -52,15 +52,15 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'               " Snippets
 Plug 'Chiel92/vim-autoformat'                                     " AutoFormat
 Plug 'Lokaltog/vim-easymotion'                                    " Easy Motion search
 Plug 'terryma/vim-multiple-cursors'                               " Multiple Cursors
-Plug 'auto-pairs-gentle'                                          " Autocomplete brackets and stuff
-Plug 'autoswap.vim'                                               " Handle swap files transparently
+Plug 'vim-scripts/auto-pairs-gentle'                              " Autocomplete brackets and stuff
+Plug 'vim-scripts/autoswap.vim'                                   " Handle swap files transparently
 Plug 'tpope/vim-endwise'                                          " adds end endif fi, etc
 Plug 'KabbAmine/zeavim.vim'                                       " Zeal
 Plug 'vim-utils/vim-troll-stopper'                                " Prevent unicode trolling
 Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim'          " Goyo - Focus
 Plug 'mattn/calendar-vim'                                         " Display calendar in vim - for orgmode
-Plug 'SyntaxRange'                                                " vim script for syntax highlighting within ranges
-Plug 'utl.vim'                                                    " vim script Universal Text Linking
+Plug 'vim-scripts/SyntaxRange'                                    " vim script for syntax highlighting within ranges
+Plug 'vim-scripts/utl.vim'                                        " vim script Universal Text Linking
 Plug 'Shougo/vimproc', { 'do': 'make' }                       " Javascript
 Plug 'tpope/vim-repeat'                                           " repeat command
 Plug 'mhinz/vim-startify'                                         " Start screen
